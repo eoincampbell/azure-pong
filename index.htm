@@ -1,0 +1,147 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Browser Pong</title>
+		<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+		<meta name="verify-v1"          content="UVFO9OlaFQVoijah5+KyKS9vpRUSUMJhAVjwzKA4ZDQ=" />
+		<meta name="author"             content="stewart A.T stewd D.OT io" />
+		<meta name="copyright"          content="Stewart Smith 2009-2011" />
+		<meta name="description"        content="" />
+		<meta name="keywords"           lang="en-us" 
+			content="Stewdio Browser Pong Stewart Smith Atari Safari Chrome Experiment FireFox Opera JavaScript jQuery" />
+		<link rel="stylesheet" type="text/css" href="lib/style.css?ver=201103011219" />
+		<script type="text/javascript" src="lib/jquery.js" ></script>
+		<script type="text/javascript" src="lib/pong.js?ver=201103011821"></script>
+	</head>
+	<body>
+		<div id="main_pad">
+
+
+
+
+			<!--  Browser Pong  -->
+
+			<h1><img src="med/pong.png" alt="Browser Pong" /></h1>
+
+
+			<!--  Winnings  -->
+
+			<div id="winnings">
+				<div id="player1wins"><p></p></div>
+				<div id="player2wins"><p></p></div>
+			</div>
+
+
+			<!--  Pong Buttons  -->
+
+			<ul class="buttons">
+				<li class="b_player1up" onclick="if( pla1 || !pla1.closed ) pla1.go_up()">
+					<p>Up<br /><strong>A</strong></p>
+				</li>
+				<li class="b_player1down" onclick="if( pla1 || !pla1.closed ) pla1.go_down()">
+					<p>Down<br /><strong>Z</strong></p>
+				</li>
+				<li class="b_player1bot exclude">
+					<p>Human<br /><input id="robot1" name="robot1" type="checkbox" /></p>
+				</li>			    
+			
+			
+				<li class="b_play" onclick="play()">
+					<p>Play<br /><strong>P</strong></p>
+				</li>
+				<li class="b_sound" onclick="audio.toggle()">
+					<p>Sound<br /><strong>S</strong></p>
+				</li>
+				<li class="b_quit" onclick="quit()">
+					<p>Quit<br /><strong>Q</strong></p>
+				</li>							
+				<li class="b_pause" onclick="pause()">
+					<p>Pause</p>
+				</li>
+
+
+				<li class="b_player2up" onclick="if( pla2 || !pla2.closed ) pla2.go_up()">
+					<p>Up<br /><strong>&uarr;</strong></p>
+				</li>
+				<li class="b_player2down" onclick="if( pla2 || !pla2.closed ) pla2.go_down()">
+					<p>Down<br /><strong>&darr;</strong></p>
+				</li>
+				<li class="b_player2bot exclude">
+					<p>Human<br /><input id="robot2" name="robot2" type="checkbox" checked="checked" /></p>
+				</li>
+			</ul>
+
+
+			<!--  More Information  -->
+
+			<p>
+				Disable your popup blocker.<br />
+				Made by <a target="_blank" href="http://stewd.io">Stewdio</a>.<br />
+				<a href="javascript:Stewdio()" onclick="about()">About Browser Pong</a>.<br />
+				<a target="_blank" href="http://chatttr.com/browser%20pong">Chat with other Pong players on Chatttr</a>.
+			</p>
+
+
+			<!--  Social Networks  -->
+
+			<div id="footer">
+				<div class="pad">
+					<a target="_blank" href="http://twitter.com/home?status=http%3A%2F%2Fstewd.io%2Fpong"
+						><img class="icon" src="med/icon_twitter.jpg" alt="Tweet this." /></a			
+		
+					><a target="_blank" href="http://facebook.com/sharer.php?u=http%3A%2F%2Fstewd.io%2Fpong&t=Browser%20Pong"
+						><img class="icon" src="med/icon_facebook.jpg" alt="Share on Facebook." /></a
+
+					><a target="_blank" href="http://digg.com/submit?url=http%3A%2F%2Fstewd.io%2Fpong&title=Browser%20Pong"
+						><img class="icon" src="med/icon_digg.jpg" alt="Digg this." /></a
+
+					><a target="_blank" href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Fstewd.io%2Fpong&title=Browser%20Pong"
+						><img class="icon" src="med/icon_delicious.jpg" alt="Bookmark with Delicious." /></a
+
+					><a target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fstewd.io%2Fpong&title=Browser%20Pong"
+						><img class="icon" src="med/icon_stumbleupon.jpg" alt="StumbleUpon." /></a>
+					<!--
+					Site &copy; 2009 <a target="_blank" href="http://stewd.io">Stewart Smith</a>.
+					Audio &copy; 2009 <a target="_blank" href="http://dominicmatar.com">Dominic Matar</a>.<br />
+					All Rights Reserved.
+					-->
+				</div>
+			</div>
+			
+
+			<!--  Aural  -->
+		
+			<div id="audio"></div>
+		</div>
+		
+		
+		<!--  Console  -->
+		
+		<div id="console">
+			<div class="pad">
+				[Nothing to report yet.]
+			</div>
+		</div>
+
+
+
+
+		<!--  Google Analytics  -->
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push([ '_setAccount', 'UA-3087756-3' ]);
+			_gaq.push([ '_trackPageview' ]);
+
+			(function()
+			{
+				var ga   = document.createElement( 'script' );
+				ga.type  = 'text/javascript';
+				ga.async = true;
+				ga.src   = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s    = document.getElementsByTagName( 'script' )[0];
+				s.parentNode.insertBefore( ga, s );
+			})();
+		</script>
+	</body>
+</html>
